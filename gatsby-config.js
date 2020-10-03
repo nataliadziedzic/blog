@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,11 +21,9 @@ module.exports = {
         fonts: [
           {
             family: `Nixie One`,
-            variants: [`400`]
           },
           {
             family: `PT Serif Caption`,
-            variants: [`400`]
           },
         ],
       },

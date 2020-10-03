@@ -1,0 +1,24 @@
+.home{
+    height: 100vh;
+    width: 100vw;
+    &__mainBackground{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    // &__mainPhoto{
+
+    // }
+    &__introductionBox{
+        width: 400px;
+    }
+    &__greeting{
+        font-size: 65px;
+    }
+    &__intro{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+}

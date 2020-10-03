@@ -1,4 +1,5 @@
-$base-color: #FFB4C5;
+$base-color: #FBBBCD;
+// #F0A9BD
 
 *{
     margin: 0;
@@ -6,9 +7,8 @@ $base-color: #FFB4C5;
     list-style: none;
     text-decoration: none;
     text-align: center;
-    overflow: hidden;
-    font-family: 'Nixi One', sans-serif;
-    color: rgb(255, 255, 255);
+    font-family: 'Nixie One', sans-serif;
+    color: #000;
     outline: none;
   }
   *,
@@ -19,13 +19,16 @@ $base-color: #FFB4C5;
   html{
     box-sizing: border-box;
   }
-  button{
-    font-family: 'Nixi One', sans-serif;
+  body{
+    overflow-x: hidden;
   }
-
+  button{
+    font-family: 'Nixie One', sans-serif;
+  }
   footer{
     height: 40px;
     line-height: 40px;
     font-size: 15px;
     background-color: $base-color;
+    color: #fff;
   }

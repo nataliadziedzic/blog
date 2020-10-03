@@ -1,7 +1,41 @@
 .header{
-    height: 30vh;
+    position: relative;
+    height: 25vh;
+    min-height: 150px;
     background-color: $base-color;
-    &__blogName{
-        font-size: 30px;
+    & * {
+        color: #fff;
+        text-shadow: 1px solid black;
+    }
+    &__logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    &__listItem{
+        font-size: 25px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+}
+.logo{
+    &__name{
+        font-size: 33px;
+        padding: 15px 40px;
+        outline: 1px solid #fff;
+    }
+    &__img{
+        position: absolute !important;
+        top: -70px;
+        right: 0;
+        transform: translateX(calc(100% - 30px));
     }
 }
