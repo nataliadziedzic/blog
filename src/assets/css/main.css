@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Nixi One', sans-serif;
+  color: white;
+  outline: none;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  font-family: 'Nixi One', sans-serif;
+}
+
+footer {
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  background-color: #FFB4C5;
+}
+
+.header {
+  height: 30vh;
+  background-color: #FFB4C5;
+}
+
+.header__blogName {
+  font-size: 30px;
+}
+/*# sourceMappingURL=main.css.map */
