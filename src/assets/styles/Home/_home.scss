@@ -1,21 +1,55 @@
 .home{
     height: 130vh;
     width: 100%;
+    @include laptop{
+        height: 100vh;
+    }
+    @include phone{
+        height: 150vh;
+    }
+    @include phone-landscape {
+        height: 230vh;
+    }
     &__mainBackground{
     height: 100%;
     width: 100%; 
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include tablet{
+        flex-direction: column;
+    }
+    @include phone{
+        justify-content: flex-start;
+    }
+    @include phone-landscape {
+        flex-direction: row;
+    }
     }
     &__introductionBox{
         width: 400px;
+        @include phone{
+            padding: 50px;
+            margin-top: 30px;
+        }
+        @include phone-landscape{
+            padding: 20px;
+        }
     }
     &__greeting{
         font-size: map-get($font-sizes, "extra-large" );
+        @include phone{
+            font-size: map-get($font-sizes, "medium-large" );
+        }
+        @include phone-landscape{
+            font-size: map-get($font-sizes, "medium-large" );
+        }
     }
     &__intro{
         font-size: map-get($font-sizes, "large" );
         margin-top: 20px;
+        @include phone{
+            font-size: map-get($font-sizes, "medium" );
+        }
     }
 }

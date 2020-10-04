@@ -7,15 +7,35 @@
     background: rgb(251,187,205);
     background: linear-gradient(0deg, rgba(251,187,205,1) 0%, rgba(191,200,188,1) 77%);
     padding: 5%;
+    @include phoneS {
+        height: 55vh;
+    }
+    @include phone-landscape {
+        height: 60vh;
+    }
     & *{
-        color: #fff;
-        text-shadow: 1px 1px rgb(52, 52, 52);
+        color: #555;
     }
     &__main{
         font-size: map-get($font-sizes, "extra-medium" );
         margin-bottom: 20px;
+        @include phone {
+            font-size: map-get($font-sizes, "medium" );
+        }
+        @include phone-landscape {
+            font-size: map-get($font-sizes, "medium" );
+        }
     }
     &__slogan{
         font-size: map-get($font-sizes, "extra-large" );
+        @include tablet {
+            font-size: map-get($font-sizes, "medium-large" );
+        }
+        @include phone {
+            font-size: map-get($font-sizes, "medium" );
+        }
+        @include phone-landscape {
+            font-size: map-get($font-sizes, "extra-medium" );
+        }
     }
 }

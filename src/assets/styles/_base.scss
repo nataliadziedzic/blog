@@ -4,10 +4,12 @@ $background-color: #f5f5dc;
 // #C1798C
 $font-sizes: (
   "extra-large": 65px,
+  "medium-large": 55px,
   "large": 35px,
   "extra-medium": 30px,
   "medium": 25px,
   "small": 18px,
+  "extra-small": 12px,
   );
 
 @mixin phoneS {
@@ -15,6 +17,9 @@ $font-sizes: (
 }
 @mixin phone {
   @media (max-width: 599px) { @content; }
+}
+@mixin phone-landscape {
+  @media (max-height: 499px) { @content; }
 }
 @mixin tablet {
   @media (max-width: 1023px) { @content; }
