@@ -5,9 +5,7 @@ import ImagesSection from "../components/Post/ImagesSection";
 import PostWrapper from "../components/Post/PostWrapper";
 
 const Post = ({ data }) => {
-    console.log(data)
-    const { datoCmsPost } = data
-    console.log(datoCmsPost)
+  const { datoCmsPost } = data
     return (
         < PostWrapper >
             <h1>{datoCmsPost.title}</h1>
