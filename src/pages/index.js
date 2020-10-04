@@ -10,6 +10,29 @@ import SelfDescription from "../components/Home/SelfDescription/SelfDescription"
 
 const IndexPage = ({ data }) => {
   const { allDatoCmsPost: { nodes } } = data
+  const handleMenuOnScroll = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      const menu = document.querySelector(".header");
+      const logo = document.querySelector(".header__logo");
+      const navigation = document.querySelector(".header__list");
+      menu.style.height = "50px";
+      logo.style.display = "none";
+      if (window.innerWidth < 1024) {
+        navigation.style.display = "flex";
+      }
+    }
+    else {
+      const menu = document.querySelector(".header");
+      const logo = document.querySelector(".header__logo");
+      const navigation = document.querySelector(".header__list");
+      menu.style.height = "150px";
+      logo.style.display = "block";
+      if (window.innerWidth < 1024) {
+        navigation.style.display = "none";
+      }
+    }
+  }
+  window.addEventListener("scroll", handleMenuOnScroll);
   return (
     <>
       <StartSectionWrapper>

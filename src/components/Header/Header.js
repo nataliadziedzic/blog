@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from 'gatsby'
-// import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const query = graphql`
 {
@@ -24,10 +24,10 @@ const Header = () => {
                 <Img className="logo__img" fixed={data.file.childImageSharp.fixed} />
             </div>
             <ul className="header__list">
-                <li className="header__listItem">Home</li>
-                <li className="header__listItem">Posts</li>
-                <li className="header__listItem">About</li>
-                <li className="header__listItem">Contact</li>
+                <AnchorLink className="header__listItem" to="/#home" stripHash><li>Home</li></AnchorLink>
+                <AnchorLink className="header__listItem" to="/#posts" stripHash><li>Posts</li></AnchorLink>
+                <AnchorLink className="header__listItem" to="/about"><li>About</li></AnchorLink>
+                <AnchorLink className="header__listItem" to="/contact"><li>Contact</li></AnchorLink>
             </ul>
         </div>
     );

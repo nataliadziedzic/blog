@@ -22,6 +22,7 @@ const BackgroundSection = ({ className }) => {
       className={className}
       fluid={backgroundData.file.childImageSharp.fluid}
       backgroundColor={`#fff`}
+      id="home"
     >
       <MainPhoto />
       <div className="home__introductionBox">
