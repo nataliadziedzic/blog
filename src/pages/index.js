@@ -10,30 +10,6 @@ import SelfDescription from "../components/Home/SelfDescription/SelfDescription"
 
 const IndexPage = ({ data }) => {
   const { allDatoCmsPost: { nodes } } = data
-  const handleMenuOnScroll = () => {
-    const menu = document.querySelector(".header");
-    const logo = document.querySelector(".header__logo");
-    const navigation = document.querySelector(".header__list");
-    const listItem = document.querySelectorAll(".header li");
-    listItem.forEach(li => li.style.transition = ".4s")
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      menu.style.height = "50px";
-      logo.style.display = "none";
-      listItem.forEach(li => li.style.color = "#555")
-      if (window.innerWidth < 1024) {
-        navigation.style.display = "flex";
-      }
-    }
-    else {
-      menu.style.height = "150px";
-      logo.style.display = "block";
-      listItem.forEach(li => li.style.color = "#fff")
-      if (window.innerWidth < 1024) {
-        navigation.style.display = "none";
-      }
-    }
-  }
-  window.addEventListener("scroll", handleMenuOnScroll);
   return (
     <>
       <StartSectionWrapper>
