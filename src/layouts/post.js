@@ -6,34 +6,48 @@ import PostWrapper from "../components/Post/PostWrapper";
 
 const Post = ({ data }) => {
   const { datoCmsPost } = data
-    return (
-        < PostWrapper >
-            <h1>{datoCmsPost.title}</h1>
-            {datoCmsPost.postContent.map(item => {
-                const itemKey = Object.keys(item)[1];
-                console.log(itemKey)
-                switch (itemKey) {
-                    case 'imageData':
-                        return (
-                            <ImagesSection>
-                                <Img fluid={item[itemKey].fluid} key={item.id} />
-                            </ImagesSection>
-                        );
-                    case 'headingContent':
-                        return <h2>{item[itemKey]}</h2>;
-                    case 'paragraphContent':
-                        return <p>{item[itemKey]}</p>;
-                    default:
-                        return
-                }
-            })}
-        </PostWrapper >
-    );
+  return (
+    < PostWrapper className="postWrapper" >
+      <h1 className="postWrapper__mainTitle">{datoCmsPost.title}</h1>
+      <ImagesSection className="imagesSection">
+        <Img className="imagesSection__img" fluid={datoCmsPost.featuredImage.fluid} />
+      </ImagesSection>
+      {datoCmsPost.postContent.map(item => {
+        const itemKey = Object.keys(item)[1];
+        switch (itemKey) {
+          case 'headingContent':
+            return <h2 className="postWrapper__heading">{item[itemKey]}</h2>;
+          case 'paragraphContent':
+            return <p className="postWrapper__paragraph">{item[itemKey]}</p>;
+          default:
+            return
+        }
+      })}
+      <ImagesSection className="imagesSection">
+        {datoCmsPost.postContent.map(item => {
+          const itemKey = Object.keys(item)[1];
+          switch (itemKey) {
+            case 'imageData':
+              return (
+                <Img className="imagesSection__img" fluid={item[itemKey].fluid} key={item.id} />
+              );
+            default:
+              return
+          }
+        })}
+      </ImagesSection>
+    </PostWrapper >
+  );
 };
 export const query = graphql`
   query queryPost($id: String!){
     datoCmsPost(id: {eq: $id}) {
         title
+        featuredImage {
+          fluid(maxWidth: 600) {
+            ...GatsbyDatoCmsFluid_tracedSVG
+          }
+        }
         postContent {
           ... on DatoCmsPostImage {
             imageData {

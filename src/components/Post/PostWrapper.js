@@ -1,8 +1,8 @@
 import React from 'react';
 
-const PostWrapper = ({ children }) => {
+const PostWrapper = ({ children, className }) => {
     return (
-        <div className="postWrapper">
+        <div className={className}>
             {children}
         </div>
     );

@@ -1,6 +1,51 @@
-.imagesSection{
-    width: 600px;
-}
 .postWrapper{
     min-height: 100vh;
+    &__mainTitle{
+        margin: 100px 50px;
+        font-size: map-get($font-sizes, "extra-large");
+        @include phone {
+            margin: 50px 20px 20px;
+            font-size: map-get($font-sizes, "large-only-for-post" );
+        }
+        @include tablet {
+            margin: 100px 20px 50px;
+        }
+    }
+    &__heading{
+        margin: 80px 10% 30px;
+        font-size: map-get($font-sizes, "large" );
+        @include phone {
+            font-size: map-get($font-sizes, "extra-medium" );
+        }
+    }
+    &__paragraph{
+        width: 80%;
+        margin: 10px auto;
+        padding: 0 70px;
+        font-size: map-get($font-sizes, "small" );
+        line-height: 35px;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        @include phone {
+            padding: 0 20px;
+        }
+        @include tablet {
+            padding: 0 40px;
+        }
+    }
+}
+.imagesSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    &__img{
+        width: 60%;
+        object-fit: cover;
+        margin-top: 50px;
+        @include tablet {
+            width: 80%;
+        }
+    }
 }
