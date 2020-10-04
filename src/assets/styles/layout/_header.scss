@@ -1,11 +1,10 @@
 .header{
     position: relative;
-    height: 25vh;
+    height: 20vh;
     min-height: 150px;
     background-color: $base-color;
     & * {
         color: #fff;
-        text-shadow: 1px solid black;
     }
     &__logo{
         position: absolute;
@@ -19,11 +18,15 @@
         position: absolute;
         bottom: 0;
         width: 100%;
+
     }
     &__listItem{
         font-size: 25px;
         margin-bottom: 15px;
         cursor: pointer;
+        &:nth-child(3){
+            margin-left: 200px;
+        }
     }
 }
 .logo{

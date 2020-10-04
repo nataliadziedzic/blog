@@ -1,5 +1,5 @@
 .home{
-    height: 100vh;
+    height: 130vh;
     width: 100vw;
     &__mainBackground{
     height: 100%;
@@ -8,17 +8,14 @@
     justify-content: space-around;
     align-items: center;
     }
-    // &__mainPhoto{
-
-    // }
     &__introductionBox{
         width: 400px;
     }
     &__greeting{
-        font-size: 65px;
+        font-size: map-get($font-sizes, "extra-large" );
     }
     &__intro{
-        font-size: 35px;
+        font-size: map-get($font-sizes, "large" );
         margin-top: 20px;
     }
 }

@@ -1,8 +1,9 @@
+require('dotenv').config();
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `nurthixblog`,
+    description: `I want to build my own fashion world by sharing my experiences and giving you an inspiration.`,
+    author: `nurthixblog`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,6 +27,12 @@ module.exports = {
             family: `PT Serif Caption`,
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.API_DATO_CMS,
       },
     },
     `gatsby-transformer-sharp`,

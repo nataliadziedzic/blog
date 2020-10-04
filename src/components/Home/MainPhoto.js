@@ -7,7 +7,7 @@ const queryMainPhoto = graphql`
   file(name: {eq: "home-author-photo"}) {
       childImageSharp {
         fixed(width: 500, quality: 90) {
-            ...GatsbyImageSharpFixed_noBase64
+            ...GatsbyImageSharpFixed_tracedSVG
           }
       }
     }
@@ -15,9 +15,9 @@ const queryMainPhoto = graphql`
   `
 
 const MainPhoto = () => {
-    const mainPhoto = useStaticQuery(queryMainPhoto)
-    return (
-        <Img className="home__mainPhoto" fixed={mainPhoto.file.childImageSharp.fixed} />
-    );
+  const mainPhoto = useStaticQuery(queryMainPhoto)
+  return (
+    <Img className="home__mainPhoto" fixed={mainPhoto.file.childImageSharp.fixed} />
+  );
 };
 export default MainPhoto

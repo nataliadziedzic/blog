@@ -1,0 +1,21 @@
+.selfDescription{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(251,187,205);
+    background: linear-gradient(0deg, rgba(251,187,205,1) 0%, rgba(191,200,188,1) 77%);
+    padding: 5%;
+    & *{
+        color: #fff;
+        text-shadow: 1px 1px rgb(52, 52, 52);
+    }
+    &__main{
+        font-size: map-get($font-sizes, "extra-medium" );
+        margin-bottom: 20px;
+    }
+    &__slogan{
+        font-size: map-get($font-sizes, "extra-large" );
+    }
+}
