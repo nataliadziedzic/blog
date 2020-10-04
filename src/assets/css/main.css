@@ -243,4 +243,12 @@ footer {
 .selfDescription__slogan {
   font-size: 65px;
 }
+
+.imagesSection {
+  width: 600px;
+}
+
+.postWrapper {
+  min-height: 100vh;
+}
 /*# sourceMappingURL=main.css.map */
