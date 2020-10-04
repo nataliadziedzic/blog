@@ -1,5 +1,7 @@
 $base-color: #FBBBCD;
 $background-color: #f5f5dc;
+// #F0A9BD
+// #C1798C
 $font-sizes: (
   "extra-large": 65px,
   "large": 35px,
@@ -7,7 +9,19 @@ $font-sizes: (
   "medium": 25px,
   "small": 18px,
   );
-// #F0A9BD
+
+@mixin phoneS {
+  @media (max-width: 320px) { @content; }
+}
+@mixin phone {
+  @media (max-width: 599px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1023px) { @content; }
+}
+@mixin laptop {
+  @media (max-width: 1399px) { @content; }
+}
 
 *{
     margin: 0;
@@ -29,6 +43,7 @@ $font-sizes: (
   }
   body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   button{
     font-family: 'Nixie One', sans-serif;

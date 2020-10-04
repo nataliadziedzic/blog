@@ -23,6 +23,7 @@ html {
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -38,9 +39,15 @@ footer {
 }
 
 .header {
-  position: relative;
-  height: 20vh;
-  min-height: 150px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: #FBBBCD;
 }
 
@@ -54,6 +61,20 @@ footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 599px) {
+  .header__logo {
+    left: 47%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header__logo {
+    left: 50%;
+  }
 }
 
 .header__list {
@@ -67,14 +88,32 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 1023px) {
+  .header__list {
+    display: none;
+  }
+}
+
 .header__listItem {
   font-size: 25px;
   margin-bottom: 15px;
   cursor: pointer;
 }
 
+@media (max-width: 599px) {
+  .header__listItem {
+    font-size: 18px;
+  }
+}
+
 .header__listItem:nth-child(3) {
-  margin-left: 200px;
+  margin-left: 270px;
+}
+
+@media (max-width: 1023px) {
+  .header__listItem:nth-child(3) {
+    margin-left: 0;
+  }
 }
 
 .logo__name {
@@ -91,9 +130,15 @@ footer {
           transform: translateX(calc(100% - 30px));
 }
 
+@media (max-width: 320px) {
+  .logo__img {
+    display: none !important;
+  }
+}
+
 .home {
   height: 130vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .home__mainBackground {
