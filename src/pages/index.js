@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import slugify from "slugify";
 import BackgroundSection from "../components/Home/BackgroundSection";
 import StartSectionWrapper from "../components/Home/StartSectionWrapper.js";
 import PostsSection from "../components/Home/PostsSection/PostsSection";
@@ -18,7 +19,7 @@ const IndexPage = ({ data }) => {
       <PostsSection>
         <PostsContainer>
           {nodes.map(({ title, date, featuredImage }) => (
-            <PostPreview key={title} title={title} date={date} image={featuredImage.fluid} />
+            <PostPreview key={title} title={title} date={date} image={featuredImage.fluid} slug={slugify(title, { lower: true })} />
           ))}
         </PostsContainer>
       </PostsSection>
