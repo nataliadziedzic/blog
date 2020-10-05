@@ -23,7 +23,7 @@ const Header = () => {
         const navigation = document.querySelector(".header__list");
         const listItem = document.querySelectorAll(".header li");
         listItem.forEach(li => li.style.transition = ".4s")
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             menu.style.height = "50px";
             logo.style.display = "none";
             listItem.forEach(li => li.style.color = "#555")
