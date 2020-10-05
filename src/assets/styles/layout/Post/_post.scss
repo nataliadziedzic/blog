@@ -1,5 +1,9 @@
 .postWrapper{
     min-height: 100vh;
+    margin-bottom: 50px;
+    @include phone {
+        margin-bottom: 30px;
+    }
     &__mainTitle{
         margin: 100px 50px;
         font-size: map-get($font-sizes, "extra-large");
