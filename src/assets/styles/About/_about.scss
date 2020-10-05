@@ -1,0 +1,46 @@
+.about{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 50px;
+    @include tablet{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @include phone{
+        margin: 0;
+    }
+    &__bio{
+        width: 50%;
+        margin-top: 150px;
+        padding: 10px 20px 10px 50px;
+        @include tablet{
+            width: 100%;
+            margin-top: 40px;
+            padding: 10px 50px;
+        }
+        @include phone {
+            padding: 10px 35px;
+        }
+    }
+    &__title{
+        margin-bottom: 50px;
+        font-size: map-get($font-sizes, "medium-large");
+        text-align: left;
+        @include tablet {
+            text-align: center;
+        }
+        @include phone {
+            font-size: map-get($font-sizes, "large" );
+        }
+    }
+    &__description{
+        font-size: map-get($font-sizes, "small" );
+        text-align: left;
+        line-height: 35px;
+        @include tablet {
+            text-align: center;
+        }
+    }
+}
