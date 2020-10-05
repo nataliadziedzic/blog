@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "gatsby"
+import axios from "axios";
 import { Formik, useField } from 'formik';
 import * as Yup from "yup";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,11 +43,13 @@ const ContactPage = () => {
                     .required('Required.'),
             })}
             onSubmit={(values, { setSubmitting, resetForm }) => {
-                setTimeout(() => {
-                    alert("Thank you for your message!");
-                    resetForm();
+                axios.post("http://localhost:5001/fashion-blog-dce5d/us-central1/helloWorld", values).then((res) => {
+                    console.log(res);
                     setSubmitting(false);
-                }, 2000)
+                }).catch((err) => {
+                    console.log(err)
+                    setSubmitting(false);
+                })
             }}
         >{props => (
             <div className="contact">
@@ -60,8 +62,8 @@ const ContactPage = () => {
                 </form>
                 <div className="follow">
                     <h1 className="follow__header">Follow me!</h1>
-                    <Link to="https://www.instagram.com/nurthixblog/" className="follow__instagram">
-                        <FontAwesomeIcon icon={faInstagram} size="1x" /> nurthix</Link>
+                    <a href="https://www.instagram.com/nurthixblog/" className="follow__instagram">
+                        <FontAwesomeIcon icon={faInstagram} size="1x" /> nurthix</a>
                 </div>
             </div>
         )}
