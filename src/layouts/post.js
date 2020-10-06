@@ -3,11 +3,17 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import ImagesSection from "../components/Post/ImagesSection";
 import PostWrapper from "../components/Post/PostWrapper";
+import SEO from "../components/Seo";
 
 const Post = ({ data }) => {
   const { datoCmsPost } = data
+  const seoImage = datoCmsPost.featuredImage.fluid
   return (
     < PostWrapper className="postWrapper" >
+      <SEO
+        title={datoCmsPost.title}
+        image={seoImage}
+      />
       <h1 className="postWrapper__mainTitle">{datoCmsPost.title}</h1>
       <ImagesSection className="imagesSection">
         <Img className="imagesSection__img" fluid={datoCmsPost.featuredImage.fluid} />

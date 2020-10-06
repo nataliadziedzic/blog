@@ -6,12 +6,14 @@ import StartSectionWrapper from "../components/Home/StartSectionWrapper.js";
 import PostsSection from "../components/Home/PostsSection/PostsSection";
 import PostPreview from "../components/Home/PostsSection/PostPreview";
 import PostsContainer from "../components/Home/PostsSection/PostsContainer";
-import SelfDescription from "../components/Home/SelfDescription/SelfDescription"
+import SelfDescription from "../components/Home/SelfDescription/SelfDescription";
+import SEO from "../components/Seo";
 
 const IndexPage = ({ data }) => {
   const { allDatoCmsPost: { nodes } } = data
   return (
     <>
+      <SEO />
       <StartSectionWrapper>
         <BackgroundSection className="home__mainBackground" />
       </StartSectionWrapper>

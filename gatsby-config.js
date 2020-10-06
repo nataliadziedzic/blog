@@ -2,8 +2,9 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `nurthixblog`,
-    description: `I want to build my own fashion world by sharing my experiences and giving you an inspiration.`,
+    description: `I want to build my own fashion world by sharing experiences and giving you an inspiration.`,
     author: `nurthixblog`,
+    image: `/home-author-photo.jpg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
