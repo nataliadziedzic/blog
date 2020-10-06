@@ -1,34 +1,5 @@
-$base-color: #FBBBCD;
-$background-color: #f5f5dc;
-// #F0A9BD
-// #C1798C
-$font-sizes: (
-  "extra-large": 65px,
-  "medium-large": 55px,
-  "large-only-for-post": 45px,
-  "large": 35px,
-  "extra-medium": 30px,
-  "medium": 25px,
-  "small": 18px,
-  "extra-small": 12px,
-  );
-
-@mixin phoneS {
-  @media (max-width: 320px) { @content; }
-}
-@mixin phone {
-  @media (max-width: 599px) { @content; }
-}
-@mixin phone-landscape {
-  @media (max-height: 499px) { @content; }
-}
-@mixin tablet {
-  @media (max-width: 1023px) { @content; }
-}
-@mixin laptop {
-  @media (max-width: 1399px) { @content; }
-}
-
+@import "./variables";
+@import "./mixins";
 *{
     margin: 0;
     padding: 0;
