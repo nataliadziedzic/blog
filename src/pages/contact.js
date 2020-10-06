@@ -66,7 +66,7 @@ const ContactPage = () => {
                 <div className="follow">
                     <h1 className="follow__header">Follow me!</h1>
                     <a href="https://www.instagram.com/nurthixblog/" className="follow__instagram">
-                        <FontAwesomeIcon icon={faInstagram} size="1x" /> nurthix</a>
+                        <FontAwesomeIcon icon={faInstagram} size="1x" /> nurthixblog</a>
                 </div>
             </div>
         )}

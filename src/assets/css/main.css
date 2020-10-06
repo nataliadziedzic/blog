@@ -24,6 +24,9 @@ html {
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  margin-top: 150px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 button {
@@ -39,12 +42,11 @@ footer {
 }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   height: 150px;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   -webkit-transition: .5s;
   transition: .5s;
@@ -138,7 +140,7 @@ footer {
 
 .home {
   height: 130vh;
-  width: 100%;
+  width: 100vw;
 }
 
 @media (max-width: 1399px) {
@@ -253,7 +255,6 @@ footer {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  background-color: #f5f5dc;
   min-height: 100vh;
 }
 
@@ -549,7 +550,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 100px 50px;
+  margin: 200px 50px 100px;
 }
 
 @media (max-width: 1023px) {
@@ -569,7 +570,7 @@ footer {
 
 @media (max-width: 599px) {
   .about {
-    margin: 0;
+    margin: 0 0 20px;
   }
 }
 
@@ -666,6 +667,7 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: 50px;
 }
 
 .form * {
@@ -739,6 +741,10 @@ footer {
 .form__submit:hover {
   background-color: #000;
   color: #fff;
+}
+
+.follow {
+  margin-top: 50px;
 }
 
 @media (max-width: 1399px) {

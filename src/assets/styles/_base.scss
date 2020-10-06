@@ -21,6 +21,8 @@
   body{
     overflow-x: hidden;
     scroll-behavior: smooth;
+    margin-top: 150px;
+    transition: .5s;
   }
   button{
     font-family: 'Nixie One', sans-serif;
@@ -30,6 +32,5 @@
     line-height: 40px;
     font-size: 15px;
     background-color: $base-color;
-    // #809EA7
     color: #fff;
   }

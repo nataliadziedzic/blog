@@ -26,6 +26,7 @@ const Header = () => {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             menu.style.height = "50px";
             logo.style.display = "none";
+            document.body.style.marginTop = "50px"
             listItem.forEach(li => li.style.color = "#555")
             if (window.innerWidth < 1024) {
                 navigation.style.display = "flex";
@@ -34,6 +35,7 @@ const Header = () => {
         else {
             menu.style.height = "150px";
             logo.style.display = "block";
+            document.body.style.marginTop = "150px"
             listItem.forEach(li => li.style.color = "#fff")
             if (window.innerWidth < 1024) {
                 navigation.style.display = "none";
