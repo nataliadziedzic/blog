@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links"
@@ -40,7 +40,9 @@ const Header = () => {
             }
         }
     }
-    window.addEventListener("scroll", handleMenuOnScroll);
+    useEffect(() => {
+        window.addEventListener("scroll", handleMenuOnScroll);
+    }, [])
     return (
         <div className="header">
             <div className="header__logo logo">
