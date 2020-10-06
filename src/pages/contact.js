@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from "axios";
+// import axios from "axios";
 import { Formik, useField } from 'formik';
 import * as Yup from "yup";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,13 +43,16 @@ const ContactPage = () => {
                     .required('Required.'),
             })}
             onSubmit={(values, { setSubmitting, resetForm }) => {
-                axios.post("http://localhost:5001/fashion-blog-dce5d/us-central1/helloWorld", values).then((res) => {
-                    console.log(res);
-                    setSubmitting(false);
-                }).catch((err) => {
-                    console.log(err)
-                    setSubmitting(false);
-                })
+                // axios.post("http://localhost:5001/fashion-blog-dce5d/us-central1/helloWorld", values).then((res) => {
+                //     console.log(res);
+                //     setSubmitting(false);
+                // }).catch((err) => {
+                //     console.log(err)
+                //     setSubmitting(false);
+                // })
+                setTimeout(() => {
+                    alert("Contact form is not ready yet :( But you can still write to me: nbaginska667@gmail.com")
+                }, 400)
             }}
         >{props => (
             <div className="contact">
