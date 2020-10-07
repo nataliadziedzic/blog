@@ -12,7 +12,7 @@ import SEO from "../components/Seo";
 const IndexPage = ({ data }) => {
   const { allDatoCmsPost: { nodes } } = data
   return (
-    <>
+    <div className="home-wrapper">
       <SEO />
       <StartSectionWrapper>
         <BackgroundSection className="home__mainBackground" />
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
           ))}
         </PostsContainer>
       </PostsSection>
-    </>
+    </div>
   );
 };
 
