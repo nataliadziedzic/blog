@@ -25,23 +25,16 @@ const Post = ({ data }) => {
             return <h2 className="postWrapper__heading">{item[itemKey]}</h2>;
           case 'paragraphContent':
             return <p className="postWrapper__paragraph">{item[itemKey]}</p>;
+          case 'imageData':
+            return (
+              <ImagesSection className="imagesSection">
+                <Img className="imagesSection__img" fluid={item[itemKey].fluid} key={item.id} />
+              </ImagesSection>
+            );
           default:
             return
         }
       })}
-      <ImagesSection className="imagesSection">
-        {datoCmsPost.postContent.map(item => {
-          const itemKey = Object.keys(item)[1];
-          switch (itemKey) {
-            case 'imageData':
-              return (
-                <Img className="imagesSection__img" fluid={item[itemKey].fluid} key={item.id} />
-              );
-            default:
-              return
-          }
-        })}
-      </ImagesSection>
     </PostWrapper >
   );
 };
