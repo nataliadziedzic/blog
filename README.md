@@ -1,5 +1,9 @@
 # FASHION-BLOG
 This website was created for a beginner **fashion influencer**. I've used **Gatsby.js** for it to be **optimized for search engines** and as a result the site should rank and perform better. All key data is retrieved from headless **DatoCMS**, so the author has a full control over what is on her blog.
+
+Currently the author works on the content so by now you can check it on the Netlify subdomain.
+
+
 See live at: [nurthixblog.netlify.app](https://nurthixblog.netlify.app/)
 
 ## Built With
