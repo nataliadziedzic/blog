@@ -11,6 +11,11 @@
     @include phone{
         margin: 0 0 20px;
     }
+    &__photo{
+        @include phone{
+            width: 100vw !important;
+        }
+    }
     &__bio{
         width: 50%;
         margin-top: 150px;

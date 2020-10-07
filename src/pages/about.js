@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const AboutPage = ({ data }) => {
   return (
     <div className="about">
-      <Img fixed={data.datoCmsAbout.myPicture.fixed} />
+      <Img className="about__photo" fixed={data.datoCmsAbout.myPicture.fixed} />
       <div className="about__bio">
         <h1 className="about__title">Let's get to know each other!</h1>
         <p className="about__description">{data.datoCmsAbout.description}</p>

@@ -24,7 +24,12 @@
     }
     @include phone-landscape {
         flex-direction: row;
+    }  
     }
+    &__mainPhoto{
+        @include phone{
+            width: 100vw !important;
+        }
     }
     &__introductionBox{
         width: 400px;
